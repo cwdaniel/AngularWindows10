@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^4.2.4",
+    "@angular/animations": "^4.4.3",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
     "@angular/core": "^4.2.4",
@@ -21,8 +21,13 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
+    "angular-resizable-element": "^1.2.3",
+    "angular2-draggable": "^1.0.7",
     "core-js": "^2.4.1",
+    "ngx-contextmenu": "^1.3.5",
+    "ngx-toastr": "^6.3.0",
     "rxjs": "^5.4.2",
+    "windows-10-icons": "^1.0.1",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

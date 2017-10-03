@@ -1,0 +1,9 @@
+.desktopIcons{
+    width:100%;
+    height: calc(100% - 44px);
+    display:flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    flex-wrap:wrap;
+    align-content: flex-start;    
+}

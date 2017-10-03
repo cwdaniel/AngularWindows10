@@ -55,7 +55,7 @@
 }
 
 .taskview {
-    background: url("../../../assets/task view.png");
+    background: url("../../../assets/core/task view.png");
     width: 49px;
     height: 44px;
     background-size: 23px;
@@ -64,7 +64,7 @@
 }
 
 .taskview:hover {
-    background: url("../../../assets/taskviewHover.png");
+    background: url("../../../assets/core/taskviewHover.png");
     width: 49px;
     height: 44px;
     background-size: 23px;
@@ -74,7 +74,7 @@
 }
 
 .notificationMenu {
-    background: url("../../../assets/emptynotification.png");
+    background: url("../../../assets/core/emptynotification.png");
     width: 40px;
     height: 44px;
     background-size: 18px;

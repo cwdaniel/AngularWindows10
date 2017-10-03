@@ -1,0 +1,22 @@
+.time {
+   padding-top: 5px;
+   height: auto;
+   width: 60px;
+}
+
+.time:hover {
+   background-color: rgba(50, 50, 50, 0.7);
+}
+
+.clock,
+.date {
+   padding-top: 2px;
+   text-align: center;
+   height: auto;
+   font-size: 0.8em;
+   line-height: 1em;
+}
+
+.date {
+   margin-top: 5px;
+}

@@ -1,0 +1,18 @@
+.taskview {
+   background: url("../../../../assets/core/task view.png");
+   width: 49px;
+   height: 44px;
+   background-size: 23px;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.taskview:hover {
+   background: url("../../../../assets/core/taskviewHover.png");
+   width: 49px;
+   height: 44px;
+   background-size: 23px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-color: rgba(50, 50, 50, 0.7);
+}

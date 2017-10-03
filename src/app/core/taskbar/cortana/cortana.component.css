@@ -1,0 +1,65 @@
+
+.cortana {
+   background-color: #343436;
+   float: left;
+   height: 44px;
+   position: relative;
+   width: 344px;
+}
+
+.cortana-wrapper {
+   display: flex;
+   box-sizing: border-box;
+   cursor: default;
+   height: 44px;
+   float: left;
+   padding-left: 10px;
+   width: 305px;
+}
+
+.cortana-circle {
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+   transform: translateY(-50%);
+}
+
+.text {
+   color: grey;
+   display: inline-block;
+   text-align: center;
+   font-size: 14px;
+   margin-top: 4px;
+   margin-left: 10px;
+}
+
+.cortana-wrapper:hover {
+   background-color: #414143;
+}
+
+.cortana-circle {
+   order: 0;
+   border: 2px solid white;
+   border-radius: 50%;
+   box-shadow: 0 0 1px 1px white;
+   display: inline-block;
+   height: 17px;
+   position: relative;
+   vertical-align: middle;
+   width: 17px;
+}
+
+.voice-search {
+   background-repeat: no-repeat;
+   background-position: center;
+   float: right;
+   display: inline-block;
+   height: 44px;
+   position: relative;
+   -webkit-transition: all 0.5s ease-out;
+   transition: all 0.5s ease-out;
+   width: 16%;
+}
+
+.voice-search:hover {
+   background-color: rgba(0, 173, 239, 0.1);
+}

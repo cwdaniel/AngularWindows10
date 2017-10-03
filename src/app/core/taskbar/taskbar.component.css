@@ -265,3 +265,16 @@
     top: 25px;
     cursor: pointer;
 }
+
+.all-icons {
+    position:absolute;
+    bottom:44px;
+    width:150px;
+    margin-left:-100px;
+    padding:5px;
+    background:rgba(36, 38, 39,1);
+    text-align:left;
+}    
+.all-icons >  .open {
+        visibility:visible;
+    }

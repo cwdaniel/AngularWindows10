@@ -14,3 +14,152 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.startmenu {
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 44px;
+    left: 0;
+    height: 300px;
+    width: 550px;
+    padding-top: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.open {
+    transition: all 0.2s ease-in-out;
+    height: 400px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.icons>.bottom {
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}
+
+.programs>.item {
+    margin-bottom: 1px;
+    transition: margin 0.5s ease-out;
+}
+
+.tiles>.tile {
+    margin-top: 0px;
+    transition: margin 0.5s ease-out;
+}
+
+.title {
+    margin: 6px 0 0 0;
+    padding: 8px 0 4px 10px;
+}
+
+.title:hover {
+    background: #333;
+}
+
+.container-fluid {
+    padding: 0;
+    height: 100%;
+}
+
+.row {
+    margin-right: 0;
+}
+
+.row,
+.programs,
+.tiles {
+    height: inherit;
+    position: relative;
+}
+
+.icons {
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 44px;
+    overflow: hidden;
+    transition: all 0.1s ease-out;
+}
+
+.open {
+    width: 200px;
+    background: #333;
+    transition: all 0.2s ease-out;
+}
+
+.icon {
+    position: relative;
+    line-height: 44px;
+    width: 100%;
+    text-align: left;
+}
+
+.fa {
+    margin-left: 17px;
+}
+
+img {
+    max-width: 36px;
+    margin-left: -4px;
+}
+
+span {
+    position: absolute;
+    left: 60px;
+    font-size: 0.6em;
+    line-height: 50px;
+    width: 100px;
+    height: 50px;
+    text-align: left;
+}
+
+.start {
+    text-transform: uppercase;
+    font-size: 1em;
+    line-height: 2.5em;
+}
+
+.top {
+    position: absolute;
+    z-index: 100;
+}
+
+.bottom {
+    position: relative;
+    bottom: 0;
+    height: 100%;
+    opacity: 0;
+}
+
+.icon {
+    position: absolute;
+}
+
+.power {
+    bottom: 0;
+}
+
+.settings {
+    bottom: 44px;
+}
+
+.file-explorer {
+    bottom: calc( 44* 2);
+}
+
+.profile {
+    bottom: calc(44 * 3);
+    padding: 0 12px;
+}
+
+img {
+    display: inline;
+    border-radius: 50%;
+}

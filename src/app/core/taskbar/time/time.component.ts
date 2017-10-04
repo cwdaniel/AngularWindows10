@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./time.component.css']
 })
 export class TimeComponent implements OnInit {
-
+  public currentTime;
   constructor() { }
 
   ngOnInit() {
   }
-
+  public time = () => {
+    setInterval(() => {
+      this.currentTime = new Date();
+    }, 1000);
+    return this.currentTime;
+    
+  }
 }

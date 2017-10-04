@@ -1,4 +1,4 @@
 <div class="time">
-   <div class="clock">3:54 PM</div>
-   <div class="date">11/28/2016</div>
+    <div class="clock">{{ time() | date:'shortTime'}}</div>
+    <div class="date">{{ time() | date:'shortDate'}}</div>
 </div>

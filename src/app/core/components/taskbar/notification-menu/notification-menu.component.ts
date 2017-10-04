@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NotificationMenuService } from '../../services/notificationMenu.service';
+import { NotificationMenuService } from '../../../services/notificationMenu.service';
 @Component({
     selector: 'core-notification-menu',
     templateUrl: './notification-menu.component.html',

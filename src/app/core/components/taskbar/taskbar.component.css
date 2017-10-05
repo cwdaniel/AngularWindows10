@@ -24,7 +24,7 @@
 .app {
     position: relative;
     display: inline-block;
-    background: url("http://icons.iconarchive.com/icons/appicns/simplified-app/512/appicns-Chrome-icon.png");
+    background: url("../../../../assets/apps/chrome/appicns-Chrome-icon.png");
     width: 49px;
     height: 44px;
     background-size: 23px;

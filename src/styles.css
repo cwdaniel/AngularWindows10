@@ -9,7 +9,7 @@ html {
   font: 15px/32px "Segoe UI", Arial, sans-serif;
 }
 .background {
-	background: url("http://cdn2.alphr.com/sites/alphr/files/2015/07/windows_10_light_and_mirror_background_0.jpg");
+	background: url("./assets/core/backgrounds/windows_10_light_and_mirror_background_0.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
   background-position: center;

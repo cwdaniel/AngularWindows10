@@ -12,11 +12,18 @@ import { AngularDraggableModule } from 'angular2-draggable';
 import { RouterModule } from '@angular/router';
 import { LockscreenSaverComponent } from '../app/core/components/lockscreen-saver/lockscreen-saver.component';
 import { HomeComponent } from './home.component';
-import { BingBackgroundService} from './core/services/bingBackground.service';
+import { BingBackgroundService } from './core/services/bingBackground.service';
+import { SignupComponent } from './core/auth/signup/signup.component';
+import { SigninComponent } from './core/auth/signin/signin.component';
+import { AuthService } from './core/auth/auth.service';
+import { AuthGuard } from './core/auth/auth-guard.service';
+
 @NgModule({
    declarations: [
       AppComponent,
       HomeComponent,
+      SignupComponent,
+      SigninComponent
    ],
    imports: [
       RouterModule.forRoot([
@@ -26,8 +33,17 @@ import { BingBackgroundService} from './core/services/bingBackground.service';
          },
          {
             path: '',
-            component: HomeComponent
-         }
+            component: HomeComponent,
+            canActivate: [AuthGuard]
+         },
+         {
+            path: 'signup',
+            component: SignupComponent
+         },
+         {
+            path: 'signin',
+            component: SigninComponent
+         },
       ]),
       BrowserModule,
       CommonModule,
@@ -37,7 +53,7 @@ import { BingBackgroundService} from './core/services/bingBackground.service';
       AppsModule,
       AngularDraggableModule
    ],
-   providers: [NotificationMenuService, DateTimeService, BingBackgroundService],
+   providers: [NotificationMenuService, DateTimeService, BingBackgroundService, AuthService, AuthGuard],
    bootstrap: [AppComponent]
 })
 export class AppModule { }

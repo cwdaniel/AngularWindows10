@@ -1,26 +1,22 @@
-import { Component } from '@angular/core';
-import { NotificationMenuService } from './core/services/notificationMenu.service';
+import { Component, OnInit } from '@angular/core';
+import * as firebase from 'firebase';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+   loadedFeature = 'recipe';
 
-  public SettingsWindow = {
-    title: 'Settings Window',
-    content: 'An entire thing of content and stuff.',
-    showSideBar: false
-  };
+   ngOnInit() {
+      firebase.initializeApp({
+         apiKey: "SECRETKEY",
+         authDomain: "WEBSITEURL",
+      });
+   }
 
-  constructor(private _notificationMenuService: NotificationMenuService) { }
-  public setToggles = () => {
-    this._notificationMenuService.toggleNotificationMenu();
-  }
-  public setTaskbarDown = () => {
-    this.setToggles()
-    this._notificationMenuService.setTaskbarMouseDown();
-  }
-  public setTaskbarLeave = () => this._notificationMenuService.setTaskbarMouseLeave();
+   onNavigate(feature: string) {
+      this.loadedFeature = feature;
+   }
 }
-

@@ -1,0 +1,11 @@
+<div class="background" (mousedown)="setToggles()">
+   <core-desktop>
+           <app-icons></app-icons>
+   </core-desktop>
+
+   <!-- <core-window [settings]="SettingsWindow">
+       <app-settings></app-settings>
+   </core-window> -->
+</div>
+<core-taskbar (mousedown)="setTaskbarDown()" (mouseleave)="setTaskbarLeave()"></core-taskbar>
+<core-notification-menu></core-notification-menu>

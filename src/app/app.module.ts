@@ -9,12 +9,26 @@ import { CommonModule } from '@angular/common';
 import { NotificationMenuService } from './core/services/notificationMenu.service';
 import { DateTimeService } from './core/services/datetime.service';
 import { AngularDraggableModule } from 'angular2-draggable';
-
+import { RouterModule } from '@angular/router';
+import { LockscreenSaverComponent } from '../app/core/components/lockscreen-saver/lockscreen-saver.component';
+import { HomeComponent } from './home.component';
+import { BingBackgroundService} from './core/services/bingBackground.service';
 @NgModule({
    declarations: [
       AppComponent,
+      HomeComponent,
    ],
    imports: [
+      RouterModule.forRoot([
+         {
+            path: 'login',
+            component: LockscreenSaverComponent
+         },
+         {
+            path: '',
+            component: HomeComponent
+         }
+      ]),
       BrowserModule,
       CommonModule,
       FormsModule,
@@ -23,7 +37,7 @@ import { AngularDraggableModule } from 'angular2-draggable';
       AppsModule,
       AngularDraggableModule
    ],
-   providers: [NotificationMenuService, DateTimeService],
+   providers: [NotificationMenuService, DateTimeService, BingBackgroundService],
    bootstrap: [AppComponent]
 })
 export class AppModule { }

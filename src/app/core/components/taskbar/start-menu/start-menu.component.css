@@ -16,15 +16,16 @@
 }
 
 .startmenu {
-    overflow: hidden;
-    opacity: 0;
     visibility: hidden;
+    display:flex;
+    justify-content: space-between;
+    overflow: hidden;
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
     bottom: 44px;
     left: 0;
-    height: 300px;
-    width: 550px;
+    height: 600px;
+    width: 850px;
     padding-top: 5px;
     border-top: 1px solid rgba(255, 255, 255, 0.4);
     border-right: 1px solid rgba(255, 255, 255, 0.4);

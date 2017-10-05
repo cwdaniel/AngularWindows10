@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { TaskbarModule } from './modules/taskbar.module';
 import { WindowModule } from './modules/window.module';
 import { DesktopModule } from './modules/desktop.module';
+import { LockscreenSaverComponent } from './components/lockscreen-saver/lockscreen-saver.component';
 
 @NgModule({
    imports: [
@@ -17,6 +18,6 @@ import { DesktopModule } from './modules/desktop.module';
       WindowModule,
       DesktopModule
    ],
-   declarations: [],
+   declarations: [LockscreenSaverComponent],
 })
 export class CoreModule { }

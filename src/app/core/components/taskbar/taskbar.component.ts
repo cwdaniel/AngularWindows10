@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { NotificationMenuService } from '../services/notificationMenu.service';
+import { NotificationMenuService } from '../../services/notificationMenu.service';
 
 @Component({
   selector: 'core-taskbar',

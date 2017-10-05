@@ -1,4 +1,4 @@
-import { WindowComponent } from './window.component';
+import { WindowComponent } from '../components/window/window.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ResizableModule } from 'angular-resizable-element';

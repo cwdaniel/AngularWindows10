@@ -55,7 +55,7 @@
 }
 
 .notificationMenu {
-    background: url("../../../assets/core/emptynotification.png");
+    background: url("../../../../assets/core/emptynotification.png");
     width: 40px;
     height: 44px;
     background-size: 18px;

@@ -7,8 +7,8 @@ import { AppsModule } from './apps/apps.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { NotificationMenuService } from './core/services/notificationMenu.service';
+import { DateTimeService } from './core/services/datetime.service';
 import { AngularDraggableModule } from 'angular2-draggable';
-
 
 @NgModule({
    declarations: [
@@ -23,7 +23,7 @@ import { AngularDraggableModule } from 'angular2-draggable';
       AppsModule,
       AngularDraggableModule
    ],
-   providers: [NotificationMenuService],
+   providers: [NotificationMenuService, DateTimeService],
    bootstrap: [AppComponent]
 })
 export class AppModule { }

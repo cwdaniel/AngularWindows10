@@ -13,17 +13,17 @@ import { RouterModule } from '@angular/router';
 import { LockscreenSaverComponent } from '../app/core/components/lockscreen-saver/lockscreen-saver.component';
 import { HomeComponent } from './home.component';
 import { BingBackgroundService } from './core/services/bingBackground.service';
-import { SignupComponent } from './core/auth/signup/signup.component';
-import { SigninComponent } from './core/auth/signin/signin.component';
-import { AuthService } from './core/auth/auth.service';
-import { AuthGuard } from './core/auth/auth-guard.service';
+import { reducers } from './store/app.reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { AuthModule } from './auth/auth.module';
+import { SharedModule } from './shared/shared.module';
+import { AuthEffects } from './auth/store/auth.effects';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
    declarations: [
       AppComponent,
       HomeComponent,
-      SignupComponent,
-      SigninComponent
    ],
    imports: [
       RouterModule.forRoot([
@@ -34,16 +34,7 @@ import { AuthGuard } from './core/auth/auth-guard.service';
          {
             path: '',
             component: HomeComponent,
-            canActivate: [AuthGuard]
-         },
-         {
-            path: 'signup',
-            component: SignupComponent
-         },
-         {
-            path: 'signin',
-            component: SigninComponent
-         },
+         }
       ]),
       BrowserModule,
       CommonModule,
@@ -51,9 +42,13 @@ import { AuthGuard } from './core/auth/auth-guard.service';
       HttpModule,
       CoreModule,
       AppsModule,
-      AngularDraggableModule
+      AngularDraggableModule,
+      AuthModule,
+      SharedModule,
+      StoreModule.forRoot(reducers),
+      EffectsModule.forRoot([AuthEffects])
    ],
-   providers: [NotificationMenuService, DateTimeService, BingBackgroundService, AuthService, AuthGuard],
+   providers: [NotificationMenuService, DateTimeService, BingBackgroundService],
    bootstrap: [AppComponent]
 })
 export class AppModule { }

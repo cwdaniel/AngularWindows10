@@ -20,7 +20,7 @@ export class TaskbarComponent implements OnInit {
     this.isAppHovered = false;
   }
   public toggleNav = () => {
-    this._notificationMenuService.toggleNotificationMenu();
+    this._notificationMenuService.iconClicked();
   }
   public enterNotificationnIcon = () => {
     this._notificationMenuService.setNotificationIconMouseEnter();

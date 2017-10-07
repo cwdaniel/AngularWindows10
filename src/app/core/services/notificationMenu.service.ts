@@ -5,27 +5,22 @@ export class NotificationMenuService {
     public notificationToggled = false;
     public notificationIconMouseEntered = false;
     public taskbarMouseDown = false;
+    public notclicked = false;
+    public desktopMouseDown = false;
+
     constructor() { }
 
-    public toggleNotificationMenu = (): void => {
-        if (this.taskbarMouseDown && this.notificationIconMouseEntered) { }
-        else {
-            if (this.taskbarMouseDown && !this.notificationIconMouseEntered) {
-                this.notificationToggled = false;
-            }
-
-            if (this.notificationIconMouseEntered) {
-                this.notificationToggled = !this.notificationToggled;
-            }
-
-            else {
-                this.notificationToggled = false;
-            }
+    public toggleNotificationMenuForEverythingButIcon = (): void => {
+        if ((this.desktopMouseDown) || (this.taskbarMouseDown && !this.notificationIconMouseEntered)) {
+            this.notificationToggled = false;
         }
     }
-    public setNotificationIconMouseEnter = () => this.notificationIconMouseEntered = true;
-    public setNotificationIconMouseLeave = () => this.notificationIconMouseEntered = false;
-    public notificationStatus = () => this.notificationToggled;
-    public setTaskbarMouseDown = () => this.taskbarMouseDown = true;
-    public setTaskbarMouseLeave = () => this.taskbarMouseDown = false;
+    public iconClicked = (): boolean => this.notificationToggled = !this.notificationToggled;
+    public setDesktopMouseDown = (): boolean => this.desktopMouseDown = true;
+    public setDesktopMouseLeave = (): boolean => this.desktopMouseDown = false;
+    public setNotificationIconMouseEnter = (): boolean => this.notificationIconMouseEntered = true;
+    public setNotificationIconMouseLeave = (): boolean => this.notificationIconMouseEntered = false;
+    public notificationStatus = (): boolean => this.notificationToggled;
+    public setTaskbarMouseDown = (): boolean => this.taskbarMouseDown = true;
+    public setTaskbarMouseLeave = (): boolean => this.taskbarMouseDown = false;
 }

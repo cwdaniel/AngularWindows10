@@ -1,10 +1,75 @@
 <div id="notification-menu" [ngClass]="{'active' : getToggleStatus() }">
-   <div> <h2>Action Center</h2>
+  <div class="notifications">
+    <h2>Action Center</h2>
+    <div class="notification">
+      <div class="title">Some Title</div>
+      <div class="description">A rather lenghty description of something for a notification that is created.</div>
+    </div>
+    No new notifications
   </div>
-  <ul class="action-center">
-     <li>One</li>
-     <li>Two</li>
-     <li>Three</li>
-     <li>Four</li>
-  </ul>
+  <div [ngClass]="{'action-center-cont' : !areIconsExpanded, 'action-center-cont-tall' : areIconsExpanded }">
+    <div class="expand" (click)="toggleIcons()">
+      {{getExpandText()}}
+    </div>
+    <ul class="action-center">
+      <li>
+        <div class="icon">icon</div>
+        <div class="text">Tablet mode</div>
+      </li>
+      <li>
+        <div class="icon">icon</div>
+        <div class="text">Network</div>
+      </li>
+      <li>
+        <div class="icon">icon</div>
+
+        <div class="text">Note</div>
+      </li>
+      <li>
+        <div class="icon">icon</div>
+
+        <div class="text">All settings</div>
+      </li>
+      <li>
+        <div class="icon">icon</div>
+
+        <div class="text">Airplane mode</div>
+      </li>
+      <li>
+        <div class="icon">icon</div>
+
+        <div class="text">Location</div>
+      </li>
+      <li>
+        <div class="icon">icon</div>
+
+        <div class="text">Quiet hours</div>
+      </li>
+      <li>
+        <div class="icon">icon</div>
+        <div class="text">Mobile hotspot</div>
+      </li>
+      <li>
+        <div class="icon">icon</div>
+
+        <div class="text">Night light</div>
+      </li>
+      <li>
+        <div class="icon">icon</div>
+
+        <div class="text">VPN</div>
+      </li>
+      <li>
+        <div class="icon">icon</div>
+
+        <div class="text">Project</div>
+      </li>
+      <li>
+        <div class="icon">icon</div>
+
+        <div class="text">Connect</div>
+      </li>
+
+    </ul>
   </div>
+</div>

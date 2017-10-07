@@ -7,10 +7,11 @@ import { NotificationMenuService } from '../../../services/notificationMenu.serv
 })
 export class NotificationMenuComponent implements OnInit {
     constructor(private _notificationMenuService: NotificationMenuService) { }
-
+    public areIconsExpanded = false;
     ngOnInit() {
     }
 
     public getToggleStatus = () => this._notificationMenuService.notificationStatus();
-
+    public toggleIcons = () => this.areIconsExpanded = !this.areIconsExpanded;
+    public getExpandText = () => this.areIconsExpanded ? 'Collapse' : 'Exapnd';
 }

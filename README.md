@@ -1,4 +1,8 @@
+
 # Windows10
+## Important information
+
+I have added the Segoe MDL2 icons, which means non-windows users will be unable to see glyphs. Youll need to add your own import for the above font...I don't believe I can link those, but they are easy to find. GLHF
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
 

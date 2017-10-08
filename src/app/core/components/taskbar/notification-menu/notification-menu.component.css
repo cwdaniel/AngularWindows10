@@ -69,6 +69,7 @@
     flex: none;
     color: white;
     font-size: 12px;
+    line-height: 12px;
 }
 
 .action-center li .icon {
@@ -100,4 +101,23 @@
     height: 100px;
     background: rgba(0, 0, 0, .1);
     color: white;
+}
+
+#msdIcon {
+  pointer-events:none;
+  color:white;
+  font-family:'Segoe MDL2 Assets';
+}
+.actionCenterHeader{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.actionCenterHeaderText {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.actionCenterHeaderClear {
+color: rgb(171, 171, 171);
+font-size: 12px;
 }

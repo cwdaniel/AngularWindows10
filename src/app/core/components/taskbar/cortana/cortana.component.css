@@ -49,17 +49,28 @@
 }
 
 .voice-search {
-   background-repeat: no-repeat;
-   background-position: center;
-   float: right;
    display: inline-block;
    height: 44px;
-   position: relative;
-   -webkit-transition: all 0.5s ease-out;
-   transition: all 0.5s ease-out;
-   width: 16%;
+   position: absolute;
+   width: 11%;
+
 }
 
 .voice-search:hover {
-   background-color: rgba(0, 173, 239, 0.1);
+   background-color: rgba(8, 166, 214, 0.14);
+   border-left: 1px solid rgba(8, 166, 214, 0.2);
+   border-right: 1px solid rgba(8, 166, 214, 0.2);
+   border-top: 1px solid rgba(8, 166, 214, 0.2);
+   box-sizing:border-box;
+   position: absolute;
+   margin-left:-1px;
+   margin-top:-1px;
+   width:11%;
+}
+
+.mdlAssetCenter {
+    color:rgb(173, 173, 173);
+    font-size: 16px;
+    line-height: 44px;
+    margin-left: 12px;
 }

@@ -8,6 +8,9 @@ html {
   overflow: hidden;
   font: 15px/32px "Segoe UI", Arial, sans-serif;
 }
+.mdlAsset {
+  font-family:'Segoe MDL2 Assets';      
+}
 .background {
 	background: url("./assets/core/backgrounds/windows_10_light_and_mirror_background_0.jpg");
 	background-size: 100%;

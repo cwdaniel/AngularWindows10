@@ -1,34 +1,31 @@
 .up-arrow {
-   width: 25px;
-   height: 100%;
-   position: relative;
+    width: 23px;
+    height: 100%;
+    position: relative;
 }
 
 .up-arrow:hover {
-   background-color: rgba(50, 50, 50, 0.7);
+    background-color: rgba(50, 50, 50, 0.7);
 }
 
 .arrow {
-   width: 10px;
-   height: 10px;
-   color: white;
-   transform: rotate(90deg);
-   transform-origin: top center;
-   position: absolute;
-   left: 25px;
-   top: 25px;
-   cursor: pointer;
+    font-size: 13px;
+    font-family: 'Segoe MDL2 Assets';
+    text-align: center;
+    vertical-align: middle;
+    line-height: 44px;
 }
 
 .all-icons {
-   visibility: hidden;
-   position:absolute;
-   bottom:44px;
-   width:150px;
-   padding:5px;
-   background:rgba(36, 38, 39,1);
-   text-align:left;
-}    
-.all-icons >  .open {
-       visibility:visible;
-   }
+    visibility: hidden;
+    position: absolute;
+    bottom: 44px;
+    width: 150px;
+    padding: 5px;
+    background: rgba(36, 38, 39, 1);
+    text-align: left;
+}
+
+.all-icons>.open {
+    visibility: visible;
+}

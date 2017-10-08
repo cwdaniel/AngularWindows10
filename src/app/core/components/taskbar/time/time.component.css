@@ -1,7 +1,8 @@
 .time {
    padding-top: 5px;
-   height: auto;
-   width: 60px;
+   height: 44px;
+   width: 65px;
+
 }
 
 .time:hover {

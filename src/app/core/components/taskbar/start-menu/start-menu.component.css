@@ -2,7 +2,7 @@
     background: url("../../../../../assets/core/Windows_256.png");
     width: 48px;
     height: 44px;
-    background-size: 17px;
+    background-size: 16px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -10,10 +10,11 @@
 #start:hover {
     background-color: rgba(50, 50, 50, 0.7);
     background-image: url("../../../../../assets/core/Windows-10-logo-larger.png");
-    background-size: 21px;
+    background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 
 .startmenu {
     visibility: hidden;

@@ -1,12 +1,20 @@
-<div class="startmenu">
-<div>Left</div>
-<div>Left-Right</div>
-<div>Right-Left</div>
-<div>Right-Right</div>
+<div class="startmenu" [ngClass]="{'active' : getToggleStatus() }">
+    <div class="small-icons">
+        <div class="mdlAsset icon"> &#xE700;</div>
+        <div class="bottom">
+        <div class="mdlAsset icon">icon</div>
+        <div class="mdlAsset icon">&#xE115;</div>
+        <div class="mdlAsset icon">&#xE7E8;</div>
+        </div>
+
+    </div>
+
+
+    <div class="programs">Left-Right</div>
+    <div class="tiles">Right-Left</div>
+    <div class="tiles">Right-Right</div>
 </div>
 
-<div id="start">
-   
+<div id="start" (click)="startMenu()">
+
 </div>
-
-

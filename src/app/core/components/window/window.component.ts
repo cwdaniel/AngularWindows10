@@ -1,5 +1,9 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { ResizeEvent } from 'angular-resizable-element';
+import { IWindow } from '../../store/windows.reducer';
+import { Store, State } from '@ngrx/store';
+import { AppState } from '../../../store/app.reducers';
+import { CloseWindow } from '../../store/windows.actions';
 
 export interface ResizeObject {
     position: string;
@@ -14,16 +18,15 @@ export interface ResizeObject {
     styleUrls: ['./window.component.css'],
 })
 export class WindowComponent implements OnInit {
-    @Input('settings') settings;
-    public showWindow = true;
+    @Input('windowSettings') windowSettings: IWindow;
     public style: ResizeObject;
-    constructor() { }
+    constructor(private _store: Store<AppState>) { }
 
     ngOnInit() {
     }
     onExit = () => {
-        this.showWindow = false;
-    }
+      this._store.dispatch(new CloseWindow(this.windowSettings.windowId));
+   }
     validate(event: ResizeEvent): boolean {
         const MIN_HEIGHT_PX: number = 300;
         const MIN_WIDTH_PX: number = 500;

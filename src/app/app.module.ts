@@ -19,6 +19,8 @@ import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthEffects } from './auth/store/auth.effects';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 
 @NgModule({
    declarations: [
@@ -46,7 +48,10 @@ import { StoreModule } from '@ngrx/store';
       AuthModule,
       SharedModule,
       StoreModule.forRoot(reducers),
-      EffectsModule.forRoot([AuthEffects])
+      EffectsModule.forRoot([AuthEffects]),
+      StoreDevtoolsModule.instrument({
+         maxAge: 20
+       })
    ],
    providers: [NotificationMenuService, DateTimeService, BingBackgroundService],
    bootstrap: [AppComponent]

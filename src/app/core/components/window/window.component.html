@@ -6,12 +6,10 @@
      [resizeEdges]="{bottom: true, right: true, top: true, left: true}"
      [enableGhostResize]="true"
      [resizeSnapGrid]="{left: 2, right: 2}"
-     (resizeEnd)="onResizeEnd($event)"
-     *ngIf="showWindow"
-     >
+     (resizeEnd)="onResizeEnd($event)">
    <div class="window-header">
       <!--<div class="ui-titleicon"></div>-->
-      <div class="ui-titletext">{{settings.title}}</div>
+      <div class="ui-titletext">{{windowSettings.windowTitle}}</div>
       <div class="ui-titlecontrols">
          <button class="ui-btn minimize">
                      <svg x="0px" y="0px" viewBox="0 0 10.2 1"><rect x="0" y="50%" width="10.2" height="1" /></svg>
@@ -23,7 +21,7 @@
       </div>
    </div>
    <div class="window-view-pane">
-      <div [ngClass]="{'window-sidebar': true, 'hide': !settings.showSideBar}">
+      <div [ngClass]="{'window-sidebar': true, 'hide': !windowSettings.windowShowSideBar}">
          sidebar....
       </div>
       <div class="window-content">

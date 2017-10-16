@@ -1,6 +1,10 @@
 <div class="background" (mouseleave)="setDesktopLeave()" (mousedown)="setDesktopDown()">
-    <!-- <core-window [settings]="SettingsWindow">
-    </core-window> -->    
+   
+   <div *ngFor="let window of windows">
+      <core-window [windowSettings]="window">
+      </core-window>     
+   </div>
+
     <core-desktop>
         <app-icons></app-icons>
     </core-desktop>

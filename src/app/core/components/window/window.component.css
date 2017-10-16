@@ -1,83 +1,97 @@
 .window {
-  position: absolute;
-   width:500px;
-   height: 300px;
-   border: 1px solid #1979CA;
-   display:flex;
-   flex-direction: column;
-   font: 12px/32px "Segoe UI", Arial, sans-serif;
-	color: #000000;
+    position: absolute;
+    min-width: 500px;
+    min-height: 300px;
+    border: 1px solid #1979CA;
+    display: flex;
+    flex-direction: column;
+    font: 12px/32px "Segoe UI", Arial, sans-serif;
+    color: #000000;
+    background: #ffffff;
 }
+
 .window .window-header {
-   background:#FFFFFF;
-display:flex;
-justify-content: space-between;
-border-bottom: 1px solid #DADBDC;
-user-select: none;
-cursor: default;
-width:100%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #DADBDC;
+    user-select: none;
+    cursor: default;
+    width: 100%;
 }
+
 .window .window-view-pane {
-   height: 100%;
-   display: flex;
+    height: 100%;
+    display: flex;
 }
+
 .window .window-sidebar {
-   width:150px;
-   background: #ffffff;
-   border-right: 2px solid #F7F7F7;
+    width: 150px;
+    background: #ffffff;
+    border-right: 2px solid #F7F7F7;
 }
-.window .window-view-pane .window-content{
-   background: #ffffff;
-   color:#000;
-   height: 100%;
-   width:100%;
+
+.window .window-view-pane .window-content {
+    background: #ffffff;
+    color: #000;
+    height: 100%;
+    width: 100%;
 }
+
 .ui-titleicon {
-	flex-grow: 1;
-	max-width: 32px;
-	max-height: 32px;
+    flex-grow: 1;
+    max-width: 32px;
+    max-height: 32px;
 }
+
 .ui-titletext {
-	flex-grow: 2;
-	max-height: 32px;
-	width: auto;
-	font: 12px/32px "Segoe UI", Arial, sans-serif;
-	color: #000000;
-	text-indent: 10px;
+    flex-grow: 2;
+    max-height: 32px;
+    width: auto;
+    font: 12px/32px "Segoe UI", Arial, sans-serif;
+    color: #000000;
+    text-indent: 10px;
 }
+
 .ui-titlecontrols {
-	max-width: 144px;
-	max-height: 32px;
-	flex-grow: 1;
+    max-width: 144px;
+    max-height: 32px;
+    flex-grow: 1;
 }
+
 .ui-btn {
-	margin: 0;
-	width: 48px;
-	height:32px;
-	border: 0;
-	outline: 0;
-	background: transparent;
+    margin: 0;
+    width: 48px;
+    height: 32px;
+    border: 0;
+    outline: 0;
+    background: transparent;
 }
+
 .ui-btn:hover {
-	background: #E5E5E5;
+    background: #E5E5E5;
 }
+
 .ui-btn.close:hover {
-   background: #e81123;
-   color:#FFFFFF;
+    background: #e81123;
+    color: #FFFFFF;
 }
-.ui-btn svg path, 
-.ui-btn svg rect, 
+
+.ui-btn svg path,
+.ui-btn svg rect,
 .ui-btn svg polygon {
-	fill: #000000;
+    fill: #000000;
 }
+
 .ui-btn svg {
-  width: 10px;
-  height: 10px;
+    width: 10px;
+    height: 10px;
 }
+
 .hide {
-   display:none;
+    display: none;
 }
 
 mwlResizable {
-   box-sizing: border-box;
- }
+    box-sizing: border-box;
+}

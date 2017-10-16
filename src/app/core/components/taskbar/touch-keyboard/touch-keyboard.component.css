@@ -1,0 +1,15 @@
+.keyboard {
+    width: 35px;
+    height: 100%;
+    position: relative;
+    font-size: 22px;
+    font-family: 'Segoe MDL2 Assets';
+    text-align: center;
+    vertical-align: middle;
+    line-height: 44px;
+}
+
+.keyboard:hover {
+    background-color: rgba(50, 50, 50, 0.7);
+}
+

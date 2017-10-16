@@ -13,7 +13,7 @@ import { TrayComponent } from '../components/taskbar/tray/tray.component';
 import { TaskviewComponent } from '../components/taskbar/taskview/taskview.component';
 import { PeekComponent } from '../components/taskbar/peek/peek.component';
 import { TimeComponent } from '../components/taskbar/time/time.component';
-
+import { TouchKeyboardComponent } from '../components/taskbar/touch-keyboard/touch-keyboard.component';
 @NgModule({
    declarations: [
       TaskbarComponent,
@@ -24,6 +24,7 @@ import { TimeComponent } from '../components/taskbar/time/time.component';
       TaskviewComponent,
       PeekComponent,
       TimeComponent,
+      TouchKeyboardComponent,
    ],
    imports: [CommonModule],
    exports: [TaskbarComponent, NotificationMenuComponent],

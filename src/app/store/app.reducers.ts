@@ -1,22 +1,14 @@
 import { ActionReducerMap } from '@ngrx/store';
 
 import * as fromAuth from '../auth/store/auth.reducers';
+import * as fromTouch from '../core/store/touch-keyboard.reducer';
 
 export interface AppState {
   auth: fromAuth.State;
+  showTouchKeyboard: fromTouch.TouchKeyboardState;
 }
-export const uiState11: UiState = {
-  defaultApps: [{ title: 'string' }],
-};
 
 export const reducers: ActionReducerMap<AppState> = {
   auth: fromAuth.authReducer,
+  showTouchKeyboard: fromTouch.reducer,
 };
-
-export interface UiState {
-  defaultApps: DefaultApps[];
-}
-
-export interface DefaultApps {
-  title: string;
-}

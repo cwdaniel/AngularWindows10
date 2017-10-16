@@ -42,3 +42,27 @@ export class WindowComponent implements OnInit {
         };
     }
 }
+
+export interface WindowState {
+    taskbarData: {
+        taskbarIcon: string;
+        isDisplayed: boolean;
+        contextMenu: string[];
+    };
+    windowData: {
+        windowId: number;
+        windowTitle: string;
+        isWindowDisplayed: boolean;
+        showSideBar: boolean;
+        windowTitleIcon: string;
+        backgroundColor: string;
+        borderColor: string;
+        secondaryBackgroundColor: string;
+        minHeight: number;
+        minWidth: number;
+        fileBar: {
+            isTitledBarShown: boolean;
+            options: string[]
+        };
+    };
+}

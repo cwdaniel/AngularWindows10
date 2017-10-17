@@ -4,6 +4,7 @@ import { IWindow } from '../../store/windows.reducer';
 import { Store, State } from '@ngrx/store';
 import { AppState } from '../../../store/app.reducers';
 import { CloseWindow } from '../../store/windows.actions';
+import { CloseTaskbarIcon } from '../../store/taskbar.actions';
 
 export interface ResizeObject {
     position: string;
@@ -18,15 +19,16 @@ export interface ResizeObject {
     styleUrls: ['./window.component.css'],
 })
 export class WindowComponent implements OnInit {
-    @Input('windowSettings') windowSettings: IWindow;
+    @Input('windowSettings') windowSettings;
     public style: ResizeObject;
     constructor(private _store: Store<AppState>) { }
 
     ngOnInit() {
     }
     onExit = () => {
-      this._store.dispatch(new CloseWindow(this.windowSettings.windowId));
-   }
+        this._store.dispatch(new CloseWindow(this.windowSettings.windowId));
+        this._store.dispatch(new CloseTaskbarIcon(this.windowSettings.windowId));
+    }
     validate(event: ResizeEvent): boolean {
         const MIN_HEIGHT_PX: number = 300;
         const MIN_WIDTH_PX: number = 500;
@@ -44,28 +46,7 @@ export class WindowComponent implements OnInit {
             height: `${event.rectangle.height}px`
         };
     }
-}
+    setActive(){
 
-export interface WindowState {
-    taskbarData: {
-        taskbarIcon: string;
-        isDisplayed: boolean;
-        contextMenu: string[];
-    };
-    windowData: {
-        windowId: number;
-        windowTitle: string;
-        isWindowDisplayed: boolean;
-        showSideBar: boolean;
-        windowTitleIcon: string;
-        backgroundColor: string;
-        borderColor: string;
-        secondaryBackgroundColor: string;
-        minHeight: number;
-        minWidth: number;
-        fileBar: {
-            isTitledBarShown: boolean;
-            options: string[]
-        };
-    };
+    }
 }

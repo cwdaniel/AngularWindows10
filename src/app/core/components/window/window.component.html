@@ -1,14 +1,16 @@
 <div class="window"
-     ngDraggable
      [ngStyle]="style"
      mwlResizable
      [validateResize]="validate"
      [resizeEdges]="{bottom: true, right: true, top: true, left: true}"
      [enableGhostResize]="true"
      [resizeSnapGrid]="{left: 2, right: 2}"
-     (resizeEnd)="onResizeEnd($event)">
+     (resizeEnd)="onResizeEnd($event)"
+     ngDraggable
+     (click)="setActive()"
+     >
    <div class="window-header">
-      <!--<div class="ui-titleicon"></div>-->
+      <div class="ui-titleicon"><img [src]="windowSettings.windowTitleIcon"></div>
       <div class="ui-titletext">{{windowSettings.windowTitle}}</div>
       <div class="ui-titlecontrols">
          <button class="ui-btn minimize">

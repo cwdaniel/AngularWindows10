@@ -1,7 +1,7 @@
 .window {
     position: absolute;
-    min-width: 500px;
-    min-height: 300px;
+    width: 500px;
+    height: 300px;
     border: 1px solid #1979CA;
     display: flex;
     flex-direction: column;
@@ -10,13 +10,11 @@
     background: #ffffff;
 }
 
-.window .window-header {
+ .window-header {
     background: #FFFFFF;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #DADBDC;
-    user-select: none;
-    cursor: default;
     width: 100%;
 }
 
@@ -42,6 +40,12 @@
     flex-grow: 1;
     max-width: 32px;
     max-height: 32px;
+}
+.ui-titleicon > img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
 }
 
 .ui-titletext {
@@ -95,3 +99,7 @@
 mwlResizable {
     box-sizing: border-box;
 }
+
+.ng-draggable {
+    cursor: move;
+  }

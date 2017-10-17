@@ -1,4 +1,4 @@
-<div class="background" (mouseleave)="setDesktopLeave()" (mousedown)="setDesktopDown()">
+<div class="background" (mouseleave)="setDesktopLeave()" (mousedown)="setDesktopDown()" (click)="setWindows()">
    
    <div *ngFor="let window of windows">
       <core-window [windowSettings]="window">

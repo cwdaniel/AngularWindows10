@@ -23,6 +23,9 @@ export interface WindowState {
 const initialState: WindowState = {
       windows: [],
 };
+export const update = (state, mutations) =>
+      Object.assign({}, state, mutations);
+
 export function reducer(state = initialState, action: windowActions.WindowActions): WindowState {
 
       switch (action.type) {
@@ -45,12 +48,18 @@ export function reducer(state = initialState, action: windowActions.WindowAction
                         windows: state.windows.filter(t => t.windowId !== action.windowId),
                   });
             case windowActions.WINDOW_ACTIVE:
-                  return Object.assign({}, state, {
-                        windows: state.windows.find(t => t.windowId !== action.windowId).isWindowActive = true,
-                  });
+                  state.windows.map(t => t.windowId === action.windowId ? t.isWindowActive = true : state);
+                  return {
+                        ...state
+                  };
+
             case windowActions.WINDOW_NOT_ACTIVE:
                   // iterate over all the windows and set the isWindowActive boolean to false
-                  return state;
+                  state.windows.map((windows) => windows.isWindowActive === true ? windows.isWindowActive = false : state);
+                  return {
+                        ...state,
+                  };
+
             default:
                   return state;
 

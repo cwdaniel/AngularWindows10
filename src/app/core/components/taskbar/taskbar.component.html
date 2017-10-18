@@ -3,7 +3,7 @@
     <taskbar-cortana></taskbar-cortana>
     <taskbar-taskview></taskbar-taskview>
     <div class="app minimized" (mouseenter)="setHoveredApp()" (mouseleave)="setAppOut()"></div>
-    <div class="app minimized" *ngFor="let taskbarIcon of taskbarIcons" [ngStyle]="{ 'background-image': 'url(' + taskbarIcon.windowTitleIcon + ')'}">
+    <div class="app minimized" [ngClass]="{active: taskbarIcon.isActive}" *ngFor="let taskbarIcon of taskbarIcons" [ngStyle]="{ 'background-image': 'url(' + taskbarIcon.windowTitleIcon + ')'}">
 
     </div>
 

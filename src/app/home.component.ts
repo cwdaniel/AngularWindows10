@@ -3,7 +3,7 @@ import { NotificationMenuService } from './core/services/notificationMenu.servic
 import { Store, State } from '@ngrx/store';
 import { AppState } from './store/app.reducers';
 import { CreateWindow, DeActivateWindow } from './core/store/windows.actions';
-
+import { DeactivateTaskbarIcon } from './core/store/taskbar.actions';
 
 @Component({
     selector: 'home',
@@ -40,5 +40,6 @@ export class HomeComponent implements OnInit {
     public setDesktopLeave = () => this._notificationMenuService.setDesktopMouseLeave();
     public setWindows() {
         this._store.dispatch(new DeActivateWindow());
+        this._store.dispatch(new DeactivateTaskbarIcon());
     }
 }

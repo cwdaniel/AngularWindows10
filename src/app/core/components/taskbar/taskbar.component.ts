@@ -39,5 +39,4 @@ export class TaskbarComponent implements OnInit {
   public exitNotificationnIcon = () => {
     this._notificationMenuService.setNotificationIconMouseLeave();
   }
-  
 }

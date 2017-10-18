@@ -1,15 +1,12 @@
 <div class="background" (mouseleave)="setDesktopLeave()" (mousedown)="setDesktopDown()" (click)="setWindows()">
-   
-   <div *ngFor="let window of windows">
-      <core-window [windowSettings]="window">
-      </core-window>     
-   </div>
-
-    <core-desktop>
+       <core-desktop>
         <app-icons></app-icons>
     </core-desktop>
-
 </div>
+<div *ngFor="let window of windows">
+    <core-window [windowSettings]="window">
+    </core-window>     
+ </div>
 <core-taskbar (mousedown)="setTaskbarDown()" (mouseleave)="setTaskbarLeave()"></core-taskbar>
 <core-notification-menu></core-notification-menu>
 <app-touch-keyboard></app-touch-keyboard>

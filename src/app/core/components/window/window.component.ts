@@ -3,9 +3,8 @@ import { ResizeEvent } from 'angular-resizable-element';
 import { IWindow } from '../../store/windows.reducer';
 import { Store, State } from '@ngrx/store';
 import { AppState } from '../../../store/app.reducers';
-import { CloseWindow } from '../../store/windows.actions';
-import { CloseTaskbarIcon } from '../../store/taskbar.actions';
-
+import { CloseWindow, ActivateWindow } from '../../store/windows.actions';
+import { CloseTaskbarIcon, ActivateTaskbarIcon, DeactivateTaskbarIcon } from '../../store/taskbar.actions';
 export interface ResizeObject {
     position: string;
     left: string;
@@ -46,7 +45,9 @@ export class WindowComponent implements OnInit {
             height: `${event.rectangle.height}px`
         };
     }
-    setActive(){
-
+    setActive() {
+        this._store.dispatch(new DeactivateTaskbarIcon());
+        this._store.dispatch(new ActivateWindow(this.windowSettings.windowId));
+        this._store.dispatch(new ActivateTaskbarIcon(this.windowSettings.windowId));
     }
 }

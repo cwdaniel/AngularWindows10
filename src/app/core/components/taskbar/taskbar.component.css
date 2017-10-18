@@ -66,3 +66,6 @@
 .notificationMenu:hover {
     background-color: rgba(50, 50, 50, 0.7);
 }
+.active {
+    background-color: rgba(50, 50, 50, 0.7);
+}
